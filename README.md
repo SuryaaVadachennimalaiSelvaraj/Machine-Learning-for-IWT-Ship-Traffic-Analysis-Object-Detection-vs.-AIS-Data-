@@ -7,5 +7,5 @@ This file will discuss steps to execute the code for object identification, the 
 The steps from downloading the video to executing the code will be explained below
 #### Step 1 - Downloading the Video
 * To be able to download a video in the background, I started off creating an account in the [amazon webservers](https://aws.amazon.com/?nc2=h_lg)
-                    * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services
+*     A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services
         
