@@ -20,8 +20,10 @@ The steps from downloading the video to executing the code will be explained bel
     * Open the PuTTY configuration window
     * In the PuTTY Configuration window, go back to the "Session" category.
     * Enter the IP address or hostname of your AWS Ubuntu instance in the "Host Name (or IP address)" field.
-    * To save this configuration for future use, enter a name for the session in the "Saved Sessions" field and click the "Save" button.
-    * With the key file loaded and the SSH connection settings configured, click the "Open" button in the PuTTY Configuration window.
+    * To save this configuration for future use, enter a name for the session in the "Saved Sessions" field and click the 
+    "Save" button.
+    * With the key file loaded and the SSH connection settings configured, click the "Open" button in the PuTTY 
+    configuration window.
 * Setting up a VNC server:
     * PuTTY will establish an SSH connection to your AWS Ubuntu instance using the loaded key file.
     * First check if the packages are updated
