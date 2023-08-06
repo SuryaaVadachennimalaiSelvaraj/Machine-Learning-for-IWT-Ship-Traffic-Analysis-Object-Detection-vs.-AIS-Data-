@@ -6,4 +6,4 @@ This file will discuss steps to execute the code for object identification, the 
 ### Procedure
 The steps from downloading the video to executing the code will be explained below
 #### Step 1 - Downloading the Video
-* To be able to download a video in the background, I started off creating an account in the [amazon webservers]{https://aws.amazon.com/?nc2=h_lg} 
+* To be able to download a video in the background, I started off creating an account in the [amazon webservers]{https://aws.amazon.com/?nc2=h_lg } 
