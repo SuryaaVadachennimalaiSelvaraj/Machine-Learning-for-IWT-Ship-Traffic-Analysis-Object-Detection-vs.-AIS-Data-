@@ -27,7 +27,7 @@ The steps from downloading the video to executing the code will be explained bel
 * Setting up a VNC server:
     * PuTTY will establish an SSH connection to your AWS Ubuntu instance using the loaded key file.
     * First check if the packages are updated
-        ```     
-        sudo apt update
-        sudo apt upgrade
-         ```
+      ```
+      sudo apt update
+      sudo apt upgrade
+      ```
