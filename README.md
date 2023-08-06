@@ -10,3 +10,15 @@ The steps from downloading the video to executing the code will be explained bel
     * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services
     * The key file is downloaded in the .ppk version to be able to access the server.
     * The security constraints are added as mentioned below ![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/-Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/992c489a-ad3e-4d98-a4e5-f1dca0699a5c)
+    * The instance is thus created 
+* Accessing the AWS key
+    * Open PuTTYgen which is also a part of the package with PuTTY
+    * Click on the "Load" button and browse your existing AWS key file with a ".pem" extension.
+    * PuTTYgen will automatically detect the key and display its details.
+    * Click on the " Save private key" button to save the key in the PuTTY Private Key (PPK) format.
+* PuTTY
+    * Open the PuTTY configuration window
+    * In the PuTTY Configuration window, go back to the "Session" category.
+    * Enter the IP address or hostname of your AWS Ubuntu instance in the "Host Name (or IP address)" field.
+    * To save this configuration for future use, enter a name for the session in the "Saved Sessions" field and click the "Save" button.
+    * With the key file loaded and the SSH connection settings configured, click the "Open" button in the PuTTY Configuration window.
