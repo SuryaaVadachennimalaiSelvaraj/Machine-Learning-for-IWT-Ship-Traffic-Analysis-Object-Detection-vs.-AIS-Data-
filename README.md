@@ -9,6 +9,4 @@ The steps from downloading the video to executing the code will be explained bel
 * To be able to download a video in the background, I started off creating an account in the [amazon webservers](https://aws.amazon.com/?nc2=h_lg)
     * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services
     * The key file is downloaded in the .ppk version to be able to access the server.
-    * The security con
-        
-![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/-Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/992c489a-ad3e-4d98-a4e5-f1dca0699a5c)
+    * The security constraints are added as mentioned below ![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/-Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/992c489a-ad3e-4d98-a4e5-f1dca0699a5c)
