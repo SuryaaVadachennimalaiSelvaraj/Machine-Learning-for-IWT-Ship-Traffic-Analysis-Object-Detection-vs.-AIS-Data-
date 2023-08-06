@@ -4,5 +4,5 @@ The main goal of this research study is to look into how object detection algori
 This file will discuss steps to execute the code for object identification, the results of which would be compared with the existing AIS data to test for anomalies.
 
 ##Procedure
-### Step 1 - Downloading the Video
+#### Step 1 - Downloading the Video
 * To be able to download a video in the background, I started of creating an account in the [amazon webservers]{https://aws.amazon.com/?nc2=h_lg} 
