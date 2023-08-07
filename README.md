@@ -71,7 +71,7 @@ The steps from downloading the video to executing the code will be explained bel
     * Copy your Public __IPv4 DNS__ from the AWS  instance portal
     * The above is entered into the app, with an extension of the display number. In this case its __:1__
 * Running the code to download the video
-    * Open the terminal and run the follwing snippets
+    * Open the terminal and run the follwing snippets, to be able to download the required dependencies and to be able            download the video successfully.
       ```
       sudo apt update
       ```
@@ -90,3 +90,84 @@ The steps from downloading the video to executing the code will be explained bel
       ```
       sudo apt install ffmpeg
       ```
+   * Run the following syntax to be able to see the available formats
+      ```
+      yt-dlp -F [URL...]
+      ```
+   * From the provided list choose the desired format and select the code
+   * Run the follwing snippet to start the download,
+     ```
+     yt-dlp [code] [URL...]
+     ```
+#### Step 2 - Creating a Dataset
+* This step is to create a dataset to be able to train the yolov5 model
+* The dataset is created in [Roboflow] {https://roboflow.com/}
+* You could also use the preexisting datasets under the universe tab
+* Once you sign-up to Roboflow you'd be able to create a dataset by clicking the create new dataset option
+* The first step is to upload the pictures of ships
+    * The number of pictures directly influence the confidence level of the detections
+    * Also to be considered is the number of classes you want to detect in the model (i.e. Ships, people)
+* The next step is where roboflow assigns the uploaded images into the traning set, validation and the test sets.
+* The next step is the annotation of the uploaded images where you have to identify the objects in the image and give it a class name(s).
+* Database generation step provides you with the option of adding preprocessing and Augmentation steps to the dataset, to be able to train your model better.
+    * I added the preprocessing steps of Auto-Orient and Static crop.
+    * Augmentation - Noise, bounding shear and Exposure to help with the not so clear detections.
+* Then by clicking generate, you have the dataset!
+* You then copy the private key of the dataset, which would be used in the next step to import the database.
+
+#### Step 3 - Training and Detection
+* The Traning and the execution of the code is performed on google colab because it is a cloud-based Jupyter Notebook platform favored for its free access to GPUs and TPUs, requiring no local setup. It integrates common libraries, supports real-time collaboration, and connects to Google Drive. With Python support and educational resources, it's a powerful tool for data science and machine learning practice and learning. However, users should be aware of session timeouts and resource limitations for more complex tasks.
+* You create an account on google colab and open a new colabarotary
+* mount your google drive to be ablt to 
+* To be able to train and run the model, the following dependencies are executed,
+```
+!git clone https://github.com/ultralytics/yolov5  # clone repo
+%cd yolov5
+%pip install -qr requirements.txt # install dependencies
+%pip install -q roboflow
+
+import torch
+import os
+from IPython.display import Image, clear_output  # to display images
+```
+* Next step would be install roboflow to be able to import the dataset 
+  ```
+  !pip install roboflow
+  ```
+   * importing the database
+      ```
+      [Private Key]
+      ```
+* Next step is training the Yolov5 model
+
+  ```
+  !python train.py --img 416 --batch 16 --epochs 150 --data          
+  [path to .yaml file] --weights [path_to_pretrained_weights] --cache
+  ```
+   * Epochs could be altered based on the usage, a really high epochs would make the detections monotonous and would make       the model only detect the objects if it is only similar to the pictures uploaded.
+   * Once the epochs are run, the weights file is generated using which the detection could be performed.
+
+* Torchvision and opencv-python is downloaded 
+  ```
+  !pip install torch torchvision
+  !pip install opencv-python-headless
+   ```
+* Ultralytics is downloaded
+  ```
+  !pip install ultralytics
+   ```
+* To be able to generate plots,
+  ```
+  !pip install matplotlib
+  ```
+
+* To run a detection, you use the syntax
+  ```
+  !python detect.py --weights [Path to the weights file (best.pt)] --img-size 640 --conf [Desired
+  Confiednce threshold ] --source [Path to the video file]
+  ```
+* You can access the detected file in the runs part of the Yolov5 folder
+    * Yolov5 &rarr; runs &rarr; detect &rarr; exp
+      
+#### Step 4 - Coding to detect, count and compare the data to the AIS data file
+* This code will be attached as a python file and the explanation for the logic behind it would be explained as comments in the same.
