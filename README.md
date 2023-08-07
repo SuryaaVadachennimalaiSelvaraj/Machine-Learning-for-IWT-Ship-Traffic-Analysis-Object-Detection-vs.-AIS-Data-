@@ -31,3 +31,8 @@ The steps from downloading the video to executing the code will be explained bel
       sudo apt update
       sudo apt upgrade
       ```
+    * To install a desktop enviornment inorder to have a GUI interface.
+      ```
+      sudo apt install xfce4
+      ```
+    * 
