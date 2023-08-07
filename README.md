@@ -35,4 +35,58 @@ The steps from downloading the video to executing the code will be explained bel
       ```
       sudo apt install xfce4
       ```
-    * 
+    * Install VNC server software
+      ```
+      sudo apt install xfce4
+      ```
+    * Set-up the VNC server
+      ```
+      vncserver :1 -geometry 1280x720 -depth 24
+      ```
+      The :1 denotes the display number
+    * Next step is setting up vnc password and confirming the same
+    * Stop the VNC server
+      ```
+      vncserver -kill :1
+      ```
+    * Open the VNC Server settings in a text editor using  the following command
+      ```
+      nano ~/.vnc/xstartup
+      ```
+      Delete the existing text and replace it with the following
+      ```
+      #!/bin/bash
+      xrdb $HOME/.Xresources
+      startxfce4 &
+      ```
+      To save the text in the editor use the __ctrl+O__, then it prompts you to enter the file name. once that is confirmed, you exit the editor using the short cut __ctrl+X__.
+    * Restart the VNC server
+      ```
+      vncserver :1 -geometry 1280x720 -depth 24
+      ```
+
+      Now you have completed the creation of the VNC server in PuTTY
+* Accessing the GUI
+    * Download the app of your choice. In this case, I have used __VNC Viewer__
+    * Copy your Public __IPv4 DNS__ from the AWS  instance portal
+    * The above is entered into the app, with an extension of the display number. In this case its __:1__
+* Running the code to download the video
+    * Open the terminal and run the follwing snippets
+      ```
+      sudo apt update
+      ```
+      ```
+      sudo apt upgrade
+      ```
+      ```
+      sudo apt install python3
+      ```
+      ``` 
+      sudo apt install pip
+      ```
+      ```
+      sudo python3 -m pip install -U yt-dlp
+      ```
+      ```
+      sudo apt install ffmpeg
+      ```
