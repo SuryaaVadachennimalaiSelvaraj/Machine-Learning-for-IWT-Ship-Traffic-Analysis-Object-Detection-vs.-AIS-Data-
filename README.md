@@ -6,18 +6,18 @@ This file will discuss steps to execute the code for object identification, the 
 ### Procedure
 The steps below will guide the user from installing the dependencies until running the code,
 #### Step 1 - Downloading the Video
-* To be able to download a video in the background, I started off creating an account in the [amazon webservers](https://aws.amazon.com/?nc2=h_lg)
-    * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services
+* To be able to download a video in the background, You started off by creating an account on the [amazon webservers](https://aws.amazon.com/?nc2=h_lg)
+    * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services.
     * The key file is downloaded in the .ppk version to be able to access the server.
     * The security constraints are added as mentioned below ![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/-Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/992c489a-ad3e-4d98-a4e5-f1dca0699a5c)
-    * The instance is thus created 
+    * The instance is thus created. 
 * Accessing the AWS key
-    * Open PuTTYgen which is also a part of the package with PuTTY
+    * Open PuTTYgen, which is also a part of the package with PuTTY.
     * Click on the "Load" button and browse your existing AWS key file with a ".pem" extension.
     * PuTTYgen will automatically detect the key and display its details.
     * Click on the " Save private key" button to save the key in the PuTTY Private Key (PPK) format.
 * PuTTY
-    * Open the PuTTY configuration window
+    * Open the PuTTY configuration window.
     * In the PuTTY Configuration window, go back to the "Session" category.
     * Enter the IP address or hostname of your AWS Ubuntu instance in the "Host Name (or IP address)" field.
     * To save this configuration for future use, enter a name for the session in the "Saved Sessions" field and click the 
@@ -26,52 +26,52 @@ The steps below will guide the user from installing the dependencies until runni
     configuration window.
 * Setting up a VNC server:
     * PuTTY will establish an SSH connection to your AWS Ubuntu instance using the loaded key file.
-    * First check if the packages are updated
+    * First check if the packages are updated using the following block,
       ```
       sudo apt update
       sudo apt upgrade
       ```
-    * To install a desktop enviornment inorder to have a GUI interface.
+    * To install a desktop environment in order to have a GUI interface,
       ```
       sudo apt install xfce4
       ```
-    * Install VNC server software
+    * Install VNC server software.
       ```
       sudo apt install xfce4
       ```
-    * Set-up the VNC server
+    * Set up the VNC server.
       ```
       vncserver :1 -geometry 1280x720 -depth 24
       ```
       The :1 denotes the display number
-    * Next step is setting up vnc password and confirming the same
-    * Stop the VNC server
+    * Next step is setting up the VNC password and confirming the same.
+    * Stop the VNC server.
       ```
       vncserver -kill :1
       ```
-    * Open the VNC Server settings in a text editor using  the following command
+    * Open the VNC Server settings in a text editor using  the following command:
       ```
       nano ~/.vnc/xstartup
       ```
-      Delete the existing text and replace it with the following
+      Delete the existing text and replace it with the following:
       ```
       #!/bin/bash
       xrdb $HOME/.Xresources
       startxfce4 &
       ```
-      To save the text in the editor use the __ctrl+O__, then it prompts you to enter the file name. once that is confirmed, you exit the editor using the short cut __ctrl+X__.
+      To save the text in the editor use the __ctrl+O__, and then it prompts you to enter the file name. Once that is confirmed, you exit the editor using the shortcut __ctrl+X__.
     * Restart the VNC server
       ```
       vncserver :1 -geometry 1280x720 -depth 24
       ```
 
-      Now you have completed the creation of the VNC server in PuTTY
+      Now you have completed the creation of the VNC server in PuTTY.
 * Accessing the GUI
-    * Download the app of your choice. In this case, I have used __VNC Viewer__
-    * Copy your Public __IPv4 DNS__ from the AWS  instance portal
-    * The above is entered into the app, with an extension of the display number. In this case its __:1__
+    * Download the app of your choice. In this case, I have used __VNC Viewer__.
+    * Copy your Public __IPv4 DNS__ from the AWS  instance portal.
+    * The above is entered into the app, with an extension of the display number. In this case, it is __:1__.
 * Running the code to download the video
-    * Open the terminal and run the follwing snippets, to be able to download the required dependencies and to be able            download the video successfully.
+    * Open the terminal and run the following snippets, to download the required dependencies and to download the video successfully.
       ```
       sudo apt update
       ```
@@ -90,36 +90,35 @@ The steps below will guide the user from installing the dependencies until runni
       ```
       sudo apt install ffmpeg
       ```
-   * Run the following syntax to be able to see the available formats
+   * Run the following syntax to be able to see the available formats:
       ```
       yt-dlp -F [URL...]
       ```
-   * From the provided list choose the desired format and select the code
-   * Run the follwing snippet to start the download,
+   * From the provided list choose the desired format and select the code.
+   * Run the following snippet to start the download:
      ```
      yt-dlp [code] [URL...]
      ```
 #### Step 2 - Creating a Dataset
-* This step is to create a dataset to be able to train the yolov5 model
-* The dataset is created in [Roboflow] {https://roboflow.com/}
-* You could also use the preexisting datasets under the universe tab
-* Once you sign-up to Roboflow you'd be able to create a dataset by clicking the create new dataset option
-* The first step is to upload the pictures of ships
-    * The number of pictures directly influence the confidence level of the detections
-    * Also to be considered is the number of classes you want to detect in the model (i.e. Ships, people)
-* The next step is where roboflow assigns the uploaded images into the traning set, validation and the test sets.
+* This step is to create a dataset to be able to train the yolov5 model.
+* The dataset is created in [Roboflow] {https://roboflow.com/}.
+* You could also use the preexisting datasets under the universe tab.
+* Once you sign-up to Roboflow you'd be able to create a dataset by clicking the create new dataset option.
+* The first step is to upload pictures of ships.
+    * The number of pictures directly influences the confidence level of the detection.
+    * Also to be considered is the number of classes you want to detect in the model (i.e. Ships, people).
+* The next step is where Roboflow assigns the uploaded images to the training set, validation and test sets.
 * The next step is the annotation of the uploaded images where you have to identify the objects in the image and give it a class name(s).
 * Database generation step provides you with the option of adding preprocessing and Augmentation steps to the dataset, to be able to train your model better.
     * I added the preprocessing steps of Auto-Orient and Static crop.
-    * Augmentation - Noise, bounding shear and Exposure to help with the not so clear detections.
+    * Augmentation: Noise, bounding shear and Exposure to help with the not-so-clear detections.
 * Then by clicking generate, you have the dataset!
 * You then copy the private key of the dataset, which would be used in the next step to import the database.
 
 #### Step 3 - Training and Detection
-* The Traning and the execution of the code is performed on google colab because it is a cloud-based Jupyter Notebook platform favored for its free access to GPUs and TPUs, requiring no local setup. It integrates common libraries, supports real-time collaboration, and connects to Google Drive. With Python support and educational resources, it's a powerful tool for data science and machine learning practice and learning. However, users should be aware of session timeouts and resource limitations for more complex tasks.
-* You create an account on google colab and open a new colabarotary
-* mount your google drive to be ablt to 
-* To be able to train and run the model, the following dependencies are executed,
+* The Traning and the execution of the code are performed on google collab because it is a cloud-based Jupyter Notebook platform favoured for its free access to GPUs and TPUs, requiring no local setup. It integrates common libraries, supports real-time collaboration, and connects to Google Drive. With Python support and educational resources, it's a powerful tool for data science and machine learning practice and learning. However, users should be aware of session timeouts and resource limitations for more complex tasks.
+* You create an account on Google Colab and open a new colabarotary.
+* mount your google drive to be able to train and run the model, the following dependencies are executed:
 ```
 !git clone https://github.com/ultralytics/yolov5  # clone repo
 %cd yolov5
@@ -130,29 +129,29 @@ import torch
 import os
 from IPython.display import Image, clear_output  # to display images
 ```
-* Next step would be install roboflow to be able to import the dataset 
+* The Next step would be to install Roboflow to be able to import the dataset. 
   ```
   !pip install roboflow
   ```
-   * importing the database
+   * Importing the database
       ```
       [Private Key]
       ```
-* Next step is training the Yolov5 model
+* Next step is training the Yolov5 model.
 
   ```
   !python train.py --img 416 --batch 16 --epochs 150 --data          
   [path to .yaml file] --weights [path_to_pretrained_weights] --cache
   ```
-   * Epochs could be altered based on the usage, a really high epochs would make the detections monotonous and would make       the model only detect the objects if it is only similar to the pictures uploaded.
-   * Once the epochs are run, the weights file is generated using which the detection could be performed.
+   * Epochs could be altered based on usage; a really high epoch would make the detections monotonous and would make          the model only detect objects that are similar to the pictures uploaded.
+   * Once the epochs are run, the weights file is generated, using which the detection could be performed.
 
-* Torchvision and opencv-python is downloaded 
+* Torchvision and opencv-python are downloaded. 
   ```
   !pip install torch torchvision
   !pip install opencv-python-headless
    ```
-* Ultralytics is downloaded
+* Ultralytics is downloaded.
   ```
   !pip install ultralytics
    ```
@@ -170,4 +169,4 @@ from IPython.display import Image, clear_output  # to display images
     * Yolov5 &rarr; runs &rarr; detect &rarr; exp
       
 #### Step 4 - Coding to detect, count and compare the data to the AIS data file
-* This code will be attached as a python file and the explanation for the logic behind it would be explained as comments in the same.
+* This code will be attached as a Python file, and the explanation for the logic behind it will be explained as comments in the same.
