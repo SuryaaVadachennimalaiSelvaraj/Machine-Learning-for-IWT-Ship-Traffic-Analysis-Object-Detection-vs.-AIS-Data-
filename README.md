@@ -99,6 +99,11 @@ The steps below will guide the user from installing the dependencies until runni
      ```
      yt-dlp [code] [URL...]
      ```
+* Accessing the Video
+    * Download the WinSCP application.
+    * Once its setup, open the application and load the private key of the AWS server.
+    * Once logged in, the two panes show the folders from your computer and the files from the web servers.
+    * Here, you can copy the files to your computer.      
 #### Step 2 - Creating a Dataset
 * This step is to create a dataset to be able to train the yolov5 model.
 * The dataset is created in [Roboflow] {https://roboflow.com/}.
@@ -116,7 +121,7 @@ The steps below will guide the user from installing the dependencies until runni
 * You then copy the private key of the dataset, which would be used in the next step to import the database.
 
 #### Step 3 - Training and Detection
-* The Traning and the execution of the code are performed on google collab because it is a cloud-based Jupyter Notebook platform favoured for its free access to GPUs and TPUs, requiring no local setup. It integrates common libraries, supports real-time collaboration, and connects to Google Drive. With Python support and educational resources, it's a powerful tool for data science and machine learning practice and learning. However, users should be aware of session timeouts and resource limitations for more complex tasks.
+* The training and the execution of the code are performed on google collab because it is a cloud-based Jupyter Notebook platform favoured for its free access to GPUs and TPUs, requiring no local setup. It integrates common libraries, supports real-time collaboration, and connects to Google Drive. With Python support and educational resources, it's a powerful tool for data science and machine learning practice and learning. However, users should be aware of session timeouts and resource limitations for more complex tasks.
 * You create an account on Google Colab and open a new colabarotary.
 * Mount your google drive to be able to train and run the model, the following dependencies are executed:
    ```
