@@ -118,17 +118,17 @@ The steps below will guide the user from installing the dependencies until runni
 #### Step 3 - Training and Detection
 * The Traning and the execution of the code are performed on google collab because it is a cloud-based Jupyter Notebook platform favoured for its free access to GPUs and TPUs, requiring no local setup. It integrates common libraries, supports real-time collaboration, and connects to Google Drive. With Python support and educational resources, it's a powerful tool for data science and machine learning practice and learning. However, users should be aware of session timeouts and resource limitations for more complex tasks.
 * You create an account on Google Colab and open a new colabarotary.
-* mount your google drive to be able to train and run the model, the following dependencies are executed:
-```
-!git clone https://github.com/ultralytics/yolov5  # clone repo
-%cd yolov5
-%pip install -qr requirements.txt # install dependencies
-%pip install -q roboflow
-
-import torch
-import os
-from IPython.display import Image, clear_output  # to display images
-```
+* Mount your google drive to be able to train and run the model, the following dependencies are executed:
+   ```
+   !git clone https://github.com/ultralytics/yolov5  # clone repo
+   %cd yolov5
+   %pip install -qr requirements.txt # install dependencies
+   %pip install -q roboflow
+   
+   import torch
+   import os
+   from IPython.display import Image, clear_output  # to display images
+   ```
 * The Next step would be to install Roboflow to be able to import the dataset. 
   ```
   !pip install roboflow
