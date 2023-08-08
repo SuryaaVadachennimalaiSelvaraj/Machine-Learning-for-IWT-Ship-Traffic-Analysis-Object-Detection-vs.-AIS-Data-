@@ -132,11 +132,8 @@ The steps below will guide the user from installing the dependencies until runni
 * The Next step would be to install Roboflow to be able to import the dataset. 
   ```
   !pip install roboflow
+  [Private Key to your dataset]
   ```
-   * Importing the database
-      ```
-      [Private Key]
-      ```
 * Next step is training the Yolov5 model.
 
   ```
