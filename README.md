@@ -50,7 +50,7 @@ version to be able to access the server.
       ```
       vncserver :1 -geometry 1280x720 -depth 24
       ```
-      The :1 denotes the display number
+      The (:1) denotes the display number of the server 
     * Next step is setting up the VNC password and confirming the same.
     * Stop the VNC server.
       ```
