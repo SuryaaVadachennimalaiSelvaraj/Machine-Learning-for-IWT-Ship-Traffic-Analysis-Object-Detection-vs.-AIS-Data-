@@ -107,7 +107,7 @@ version to be able to access the server.
      ```
 * Accessing the Video
     * Download the WinSCP application.
-    * Once its setup, open the application and load the private key of the AWS server.
+    * Once it's set up, open the application and load the private key of the AWS server.
     * Once logged in, the two panes show the folders from your computer and the files from the web servers.
     * Here, you can copy the files to your computer.      
 #### Step 2 - Creating a Dataset
