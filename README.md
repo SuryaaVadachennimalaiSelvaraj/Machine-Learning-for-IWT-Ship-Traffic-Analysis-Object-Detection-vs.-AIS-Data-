@@ -11,7 +11,7 @@ The steps below will guide the user from installing the dependencies until runni
     * The key file is downloaded in the .ppk 
 version to be able to access the server.
     * The security constraints are added as mentioned below![Screenshot 2023-08-06 162458]
-        * The constraints are setup when creating the instance or could be adjusted once the instance is created by accessing the actions ➡️ Security groups.   
+        * The constraints are set up when creating the instance or could be adjusted once the instance is created by accessing the "Actions ➡️ Security groups."   
     ![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/1f33ca0c-c9f5-4c5c-8286-098f8a25b4e4)    
      ![Screenshot 2023-08-15 120253](https://github.com/SuryaaVadachennimalaiSelvaraj/Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/f849aeb2-4ed6-4a5e-8317-c11e6788ec2d)
     * The instance is thus created. 
@@ -65,7 +65,7 @@ version to be able to access the server.
       xrdb $HOME/.Xresources
       startxfce4 &
       ```
-      To save the text in the editor use the __ctrl+O__, and then it prompts you to enter the file name. Once that is confirmed, you exit the editor using the shortcut __ctrl+X__.
+      To save the text in the editor use the __ctrl+O__, which prompts you to enter the file name. Once that is confirmed, you exit the editor using the shortcut __ctrl+X__.
     * Restart the VNC server
       ```
       vncserver :1 -geometry 1280x720 -depth 24
