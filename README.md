@@ -6,7 +6,7 @@ This file will discuss steps to execute the code for object identification, the 
 ### Procedure
 The steps below will guide the user from installing the dependencies until running the code,
 #### Step 1 - Downloading the Video
-* To be able to download a video in the background, You start off by creating an account on the [amazon webservers](https://aws.amazon.com/?nc2=h_lg)
+* To be able to download a video in the background, You start off by creating an account on the [Amazon Webservers](https://aws.amazon.com/?nc2=h_lg)
     * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services.
     * The key file is downloaded in the .ppk 
 version to be able to access the server.
