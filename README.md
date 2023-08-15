@@ -38,7 +38,7 @@ The steps below will guide the user from installing the dependencies until runni
       ```
     * Install VNC server software.
       ```
-      sudo apt install xfce4
+      sudo apt install tigervnc-standalone-server
       ```
     * Set up the VNC server.
       ```
