@@ -6,19 +6,24 @@ This file will discuss steps to execute the code for object identification, the 
 ### Procedure
 The steps below will guide the user from installing the dependencies until running the code,
 #### Step 1 - Downloading the Video
-* To be able to download a video in the background, You started off by creating an account on the [amazon webservers](https://aws.amazon.com/?nc2=h_lg)
+* To be able to download a video in the background, You start off by creating an account on the [amazon webservers](https://aws.amazon.com/?nc2=h_lg)
     * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services.
-    * The key file is downloaded in the .ppk version to be able to access the server.
-    * The security constraints are added as mentioned below ![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/-Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/992c489a-ad3e-4d98-a4e5-f1dca0699a5c)
-    * ![Screenshot 2023-08-15 120253](https://github.com/SuryaaVadachennimalaiSelvaraj/Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/f849aeb2-4ed6-4a5e-8317-c11e6788ec2d)
+    * The key file is downloaded in the .ppk 
+version to be able to access the server.
+    * The security constraints are added as mentioned below![Screenshot 2023-08-06 162458]
+        * The constraints are setup when creating the instance or could be adjusted once the instance is created by accessing the actions ➡️ Security groups.   
+    ![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/1f33ca0c-c9f5-4c5c-8286-098f8a25b4e4)    
+     ![Screenshot 2023-08-15 120253](https://github.com/SuryaaVadachennimalaiSelvaraj/Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/f849aeb2-4ed6-4a5e-8317-c11e6788ec2d)
     * The instance is thus created. 
 * Accessing the AWS key
-    * Open PuTTYgen, which is also a part of the package with PuTTY.
-    * Click on the "Load" button and browse your existing AWS key file with a ".pem" extension.
+    * Open PuTTYgen, which is also a part of the package with [PuTTY](https://www.putty.org/).
+    * Click on the "Load" button and browse your existing AWS key file with a ".pem/.ppk" extension.
     * PuTTYgen will automatically detect the key and display its details.
     * Click on the " Save private key" button to save the key in the PuTTY Private Key (PPK) format.
 * PuTTY
     * Open the PuTTY configuration window.
+    * Navigate to "Connection ➡️ SSH ➡️ Auth".
+    * Click on the "Browse" button next to "Private key file for authentication" and select the PPK file you created in the previous step.
     * In the PuTTY Configuration window, go back to the "Session" category.
     * Enter the IP address or hostname of your AWS Ubuntu instance in the "Host Name (or IP address)" field.
     * To save this configuration for future use, enter a name for the session in the "Saved Sessions" field and click the 
