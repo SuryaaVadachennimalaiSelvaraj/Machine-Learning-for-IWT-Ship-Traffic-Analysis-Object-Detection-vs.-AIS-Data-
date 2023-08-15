@@ -10,8 +10,9 @@ The steps below will guide the user from installing the dependencies until runni
     * A New instance is created with __Ubuntu__ as the Operating system and the other options such that they complement the free tier services.
     * The key file is downloaded in the .ppk 
 version to be able to access the server.
-    * The security constraints are added as mentioned below![Screenshot 2023-08-06 162458]
-        * The constraints are set up when creating the instance or could be adjusted once the instance is created by accessing the "Actions ➡️ Security groups."   
+    * The security constraints:
+        * The constraints are set up when creating the instance or could be adjusted once the instance is created by accessing the "Actions ➡️ Security groups" in the instance console.
+        * The Following constraints are added:   
     ![Screenshot 2023-08-06 162458](https://github.com/SuryaaVadachennimalaiSelvaraj/Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/1f33ca0c-c9f5-4c5c-8286-098f8a25b4e4)    
      ![Screenshot 2023-08-15 120253](https://github.com/SuryaaVadachennimalaiSelvaraj/Machine-Learning-for-IWT-Ship-Traffic-Analysis-Object-Detection-vs.-AIS-Data-/assets/141555542/f849aeb2-4ed6-4a5e-8317-c11e6788ec2d)
     * The instance is thus created. 
