@@ -73,7 +73,7 @@ version to be able to access the server.
 
       Now you have completed the creation of the VNC server in PuTTY.
 * Accessing the GUI
-    * Download the app of your choice. In this case, I have used __VNC Viewer__.
+    * Download the app of your choice. In this case, I have used [__VNC Viewer__](https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-7.6.0-Windows.exe).
     * Copy your Public __IPv4 DNS__ from the AWS  instance portal.
     * The above is entered into the app, with an extension of the display number. In this case, it is __:1__.
 * Running the code to download the video
