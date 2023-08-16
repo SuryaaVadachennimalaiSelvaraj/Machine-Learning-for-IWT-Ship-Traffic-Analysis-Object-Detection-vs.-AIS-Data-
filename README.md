@@ -173,10 +173,10 @@ version to be able to access the server.
 * To run a detection, you use the syntax
   ```
   !python detect.py --weights [Path to the weights file (best.pt)] --img-size 640 --conf [Desired
-  Confiednce threshold ] --source [Path to the video file]
+  Confidence threshold ] --source [Path to the video file]
   ```
 * You can access the detected file in the runs part of the Yolov5 folder
-    * Yolov5 &rarr; runs &rarr; detect &rarr; exp
+    * Yolov5 ➡️ runs ➡️ detect ➡️ exp.
       
 #### Step 4 - Coding to detect, count and compare the data to the AIS data file
 * This code will be attached as a Python file, and the explanation for the logic behind it will be explained as comments in the same.
