@@ -133,7 +133,7 @@ version to be able to access the server.
 * You create an account on Google Colab and open a new colabarotary.
 * Mount your google drive to be able to train and run the model, the following dependencies are executed:
    ```
-   !git clone https://github.com/ultralytics/yolov5  # clone repo
+   !git clone https://github.com/ultralytics/yolov5  
    %cd yolov5
    %pip install -qr requirements.txt # install dependencies
    %pip install -q roboflow
