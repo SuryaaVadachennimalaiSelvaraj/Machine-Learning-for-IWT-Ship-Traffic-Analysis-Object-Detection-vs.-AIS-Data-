@@ -129,7 +129,7 @@ version to be able to access the server.
 * Then by clicking generate, you have the dataset!
 * You then copy the private key of the dataset, which would be used in the next step to import the database.
 
-* The Dataset that was used for the said project is also attached to the repository. 
+* The Dataset that was used for the said project is also attached to the [Dataset] (repository). 
     * The test, train and validation files consist of images, which are distinguished to yield better results with the model.
     * The data.yaml file is a key file where you provide the path to the above three image files and the path of this data.yaml file is then added to the train command.
     * This helps train the model
