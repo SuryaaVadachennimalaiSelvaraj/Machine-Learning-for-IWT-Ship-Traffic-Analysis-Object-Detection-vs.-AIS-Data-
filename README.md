@@ -129,10 +129,11 @@ version to be able to access the server.
 * Then by clicking generate, you have the dataset!
 * You then copy the private key of the dataset, which would be used in the next step to import the database.
 
-* The Dataset that was used for the said project is also attached to the [Dataset] (repository). 
+
+**_NOTE:_*** 
+* The Dataset that was used for the said project is also attached to the Repository.
     * The test, train and validation files consist of images, which are distinguished to yield better results with the model.
     * The data.yaml file is a key file where you provide the path to the above three image files and the path of this data.yaml file is then added to the train command.
-    * This helps train the model
 
 #### Step 3 - Training and Detection
 * The training and the execution of the code are performed on google collab because it is a cloud-based Jupyter Notebook platform favoured for its free access to GPUs and TPUs, requiring no local setup. It integrates common libraries, supports real-time collaboration, and connects to Google Drive. With Python support and educational resources, it's a powerful tool for data science and machine learning practice and learning. However, users should be aware of session timeouts and resource limitations for more complex tasks.
