@@ -184,6 +184,10 @@ version to be able to access the server.
   ```
 * You can access the detected file in the runs part of the Yolov5 folder
     * Yolov5 ➡️ runs ➡️ detect ➡️ exp.
+    * 
+    
+**_NOTE:_** 
+* I have attached a copy of the google colab document in the repository as AIS_detection.ipynb
       
 #### Step 4 - Coding to detect, count and compare the data to the AIS data file
 * This code will be attached as a Python file, and the explanation for the logic behind it will be explained as comments in the same.
