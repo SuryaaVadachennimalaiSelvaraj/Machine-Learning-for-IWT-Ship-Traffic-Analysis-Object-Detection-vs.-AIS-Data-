@@ -130,7 +130,7 @@ version to be able to access the server.
 * You then copy the private key of the dataset, which would be used in the next step to import the database.
 
 
-**_NOTE:_*** 
+**_NOTE:_** 
 * The Dataset that was used for the said project is also attached to the Repository.
     * The test, train and validation files consist of images, which are distinguished to yield better results with the model.
     * The data.yaml file is a key file where you provide the path to the above three image files and the path of this data.yaml file is then added to the train command.
@@ -187,3 +187,4 @@ version to be able to access the server.
       
 #### Step 4 - Coding to detect, count and compare the data to the AIS data file
 * This code will be attached as a Python file, and the explanation for the logic behind it will be explained as comments in the same.
+* The Algorithm developed is attached under the name __Main.py__.
