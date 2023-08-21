@@ -192,3 +192,6 @@ version to be able to access the server.
 #### Step 4 - Coding to detect, count and compare the data to the AIS data
 * This code will be attached as a Python file, and the explanation for the logic behind it will be explained as comments in the same.
 * The Algorithm developed is attached under the name __Main.py__.
+
+**_Note:_**
+* The code for the above execution is present in Google Colab, and a copy of the same is attached in the repository as AIS_detection.ipynb.
