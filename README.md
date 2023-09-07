@@ -45,7 +45,7 @@ version to be able to access the server.
       ```
     * Install VNC server software.
       ```
-      sudo apt install tigervnc
+      sudo apt install tightvncserver
       ```
     * Set up the VNC server.
       ```
